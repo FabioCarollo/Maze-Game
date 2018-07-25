@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maze.view.GameController">
+   <children>
+      <Pane layoutX="-9.0" layoutY="21.0" prefHeight="115.0" prefWidth="900.0" style="-fx-background-color: #81d2ef;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btnEsci" layoutX="735.0" layoutY="18.0" mnemonicParsing="false" onAction="#EsciGioco" prefHeight="65.0" prefWidth="154.0" style="-fx-background-color: #81d2ef;" text="Torna alla Homepage" textFill="WHITE" />
+         </children></Pane>
+      <Label fx:id="lbUsername" layoutX="41.0" layoutY="34.0" textFill="#424242" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="MyriadPro-Regular" size="36.0" />
+         </font></Label>
+      <Pane fx:id="pane" layoutX="393.0" layoutY="96.0" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <SwingNode fx:id="nodeGame" onMouseClicked="#updateLabelTocchi" />
+            <Pane fx:id="pane2" layoutX="-9.0" layoutY="-5.0" prefHeight="513.0" prefWidth="515.0" style="-fx-background-color: rgba(66, 66, 66,0.6);" visible="false">
+               <children>
+                  <Button fx:id="btnSave" layoutX="191.0" layoutY="385.0" mnemonicParsing="false" onAction="#SalvaPartita" prefHeight="69.0" prefWidth="222.0" style="-fx-background-color: #f48f42;" text="Salva la partita" visible="false" />
+                  <Label fx:id="labelWinner" alignment="CENTER" layoutX="123.0" layoutY="119.0" prefHeight="213.0" prefWidth="341.0" style="-fx-background-radius: 3 3 3 3; -fx-background-color: #87c45a;" text="Winner!" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Button fx:id="startGame" layoutX="24.0" layoutY="140.0" mnemonicParsing="false" onAction="#startGame" prefHeight="65.0" prefWidth="154.0" style="-fx-background-color: #81d2ef;" text="START GAME" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font name="MyriadPro-Semibold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="stopGame" layoutX="190.0" layoutY="140.0" mnemonicParsing="false" onAction="#stopGame" prefHeight="65.0" prefWidth="154.0" style="-fx-background-color: #87c45a;" text="PAUSE" visible="false" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="140.0" />
+      <Label layoutX="45.0" layoutY="251.0" text="Tempo" textFill="WHITE" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTime" layoutX="123.0" layoutY="251.0" text="00:00:00" textFill="WHITE" AnchorPane.leftAnchor="123.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="idTocchi" layoutX="127.0" layoutY="289.0" text="0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="289.0" text="Tocchi" textFill="WHITE" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="pauseLabel" alignment="CENTER" layoutX="186.0" layoutY="122.0" prefHeight="561.0" prefWidth="684.0" style="-fx-background-color: #87c45a; -fx-background-radius: 3 3 3 3;" text="Label" textAlignment="RIGHT" visible="false" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="3.0">
+         <font>
+            <Font name="System Bold" size="53.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

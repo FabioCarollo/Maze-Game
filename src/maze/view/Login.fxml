@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import de.jensd.fx.glyphs.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #81d2ef;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maze.view.LoginController">
+   <children>
+      <Pane layoutX="250.0" layoutY="133.0" prefHeight="393.0" prefWidth="415.0" style="-fx-background-color: rgba(66, 66, 66,0.8); -fx-background-radius: 10;" styleClass="loginPanel" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="133.0">
+         <children>
+            <Button fx:id="btn_Login" layoutX="137.0" layoutY="256.0" mnemonicParsing="false" onAction="#Login" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #81d2ef;" text="Login" textFill="WHITE" />
+            <Label layoutX="40.0" layoutY="209.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="39.0" layoutY="163.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <PasswordField fx:id="lb_pass" layoutX="125.0" layoutY="203.0" prefHeight="30.0" promptText="Password">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding></PasswordField>
+            <TextField fx:id="lb_user" layoutX="125.0" layoutY="157.0" prefHeight="30.0" promptText="Username">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding></TextField>
+         </children>
+      </Pane>
+      <Label fx:id="lb_status" layoutX="796.0" layoutY="659.0" text="Status" textFill="#f88102" />
+      <ImageView fitHeight="124.0" fitWidth="96.0" layoutX="582.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" rotate="29.7" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="97.0">
+         <image>
+            <Image url="http://i67.tinypic.com/21dfpqo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
